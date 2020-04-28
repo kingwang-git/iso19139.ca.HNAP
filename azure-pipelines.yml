@@ -1,18 +1,16 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- master
+resources:
+  repositories:
+    - repository: catalog
+      type: git
+      name: TADAP-ACPDA/geonetwork-catalog
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: tadap-dev
+  demands: maven
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    ls
-  displayName: 'Run a multi-line script'
+  - checkout: self
+    clean: true
+  - checkout: catalog
+    submodules: recursive
+  - script: ls $(Build.SourcesDirectory)
