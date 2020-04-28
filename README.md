@@ -1,5 +1,7 @@
 # ISO Harmonized North American Profile (HNAP) plugin for GeoNetwork
 
+TEST
+
 ISO Harmonized North American Profile (HNAP)
 
 ## Installing the plugin
