@@ -56,6 +56,8 @@ public class XslUtilHnap {
      * @return
      */
     public static int compareDates(String endDate, String startDate) {
+        //add a broken code
+        blablabla
         Log.debug(Geonet.SCHEMA_MANAGER, "compareDates extension is called to compare : " + endDate + ", " + startDate);
         if (StringUtils.isEmpty(endDate) || StringUtils.isEmpty(startDate)) {
             return 1;
